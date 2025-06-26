@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #162052;
+        color: white;
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      .navbar-wrapper {
+        width: 80%;
+        border-bottom: 3px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        padding: 10px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: white;
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+
+      .nav-link:hover {
+        border-color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 10px;
+      }
+
+      /* Responsive Navbar */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
+
+      .container1 {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+      }
+
+      .sub_title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: #fff;
+      }
+
+      .sub_title span {
+        color: #00ccff;
+      }
+
+      .bar {
+        margin-bottom: 25px;
+      }
+
+      .bar i {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .info {
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+
+      .skillist {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .persantage {
+        position: relative;
+        z-index: 2;
+      }
+
+      #html {
+        background-color: rgb(214, 114, 48);
+        width: 90%;
+        animation: animate_html 3s;
+      }
+
+      #css {
+        background-color: rgb(67, 69, 233);
+        width: 60%;
+        animation: animate_css 3s;
+      }
+
+      #js {
+        background-color: rgb(196, 243, 24);
+        width: 50%;
+        animation: animate_js 3s;
+        color: black;
+      }
+
+      #wp {
+        background-color: rgb(10, 150, 175);
+        width: 80%;
+        animation: animate_wp 3s;
+      }
+
+      #react {
+        background-color: rgb(11, 160, 206);
+        width: 20%;
+        animation: animate_react 3s;
+      }
+
+      @keyframes animate_html {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 90%;
+        }
+      }
+
+      @keyframes animate_css {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 60%;
+        }
+      }
+
+      @keyframes animate_js {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 50%;
+        }
+      }
+
+      @keyframes animate_wp {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 80%;
+        }
+      }
+
+      @keyframes animate_react {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 20%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <section class="navegation">
+      <div class="header">
+        <div class="navbar-wrapper">
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <i class='bx bx-menu'></i>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="Education.html">Education</a>
+            <a class="nav-link" href="skills.html">SKILLS</a>
+            <a class="nav-link" href="servises.html">Servises</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <div class="container1" id="skills">
+      <h2 class="sub_title">My <span>Skills</span></h2>
+
+      <div class="bar">
+        <i class="bx bxl-html5" style="color: rgb(214, 114, 48)"></i> HTML
+        <div class="info">
+          <div class="skillist" id="html">
+            <div class="persantage">90%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <i class="bx bxl-css3" style="color: rgb(67, 69, 233)"></i> CSS
+        <div class="info">
+          <div class="skillist" id="css">
+            <div class="persantage">60%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <i class="bx bxl-javascript" style="color: rgb(196, 243, 24)"></i> JavaScript
+        <div class="info">
+          <div class="skillist" id="js">
+            <div class="persantage">50%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <i class="bx bxl-wordpress" style="color: rgb(10, 150, 175)"></i> WordPress
+        <div class="info">
+          <div class="skillist" id="wp">
+            <div class="persantage">80%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <i class="bx bxl-react" style="color: rgb(11, 160, 206)"></i> React
+        <div class="info">
+          <div class="skillist" id="react">
+            <div class="persantage">20%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for toggle -->
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

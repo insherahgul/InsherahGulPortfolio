@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skills</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    body {
+      background: #162052;
+
+      font-family: "Poppins", sans-serif;
+    }
+
+    #html {
+      background-color: rgb(214, 114, 48);
+      width: 90%;
+      animation: animate_html 3s;
+      height: 35px;
+      position: relative;
+      border-radius: 5px;
+      border-right: none;
+    }
+
+    @keyframes animate_html {
+      from {
+        width: 20%;
+      }
+      to {
+        width: 90%;
+      }
+    }
+
+    .per {
+      z-index: 3;
+      position: relative;
+      margin-right: 15px;
+      margin-top: 10px;
+      float: right;
+      text-shadow: none;
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 16px;
+    }
+    .name {
+      font-size: 15px;
+      z-index: 1;
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 15px;
+      text-shadow: none;
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+    }
+    #skills {
+      font-size: 20px;
+      margin: 45px auto;
+      overflow: hidden;
+    }
+
+    .skill_bar {
+      width: 50%;
+      height: 35px;
+      position: relative;
+      background: #ddd;
+      border-radius: 1000px;
+      text-transform: uppercase;
+      margin: 20px auto;
+    }
+  </style>
+
+  <body>
+    <section>
+      <div id="skills">
+        <div class="skill_bar">
+          <div id="html">
+            <span class="name">HTML</span>
+            <span class="per">90%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

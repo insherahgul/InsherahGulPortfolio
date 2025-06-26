@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #162052;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+      }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem 0;
+    }
+
+    .navbar-container {
+      width: 80%;
+      border-bottom: 3px solid white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 10px;
+    }
+
+    .nav-link {
+      padding: 10px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: white;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .nav-link:hover {
+      border-color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 80px 20px;
+      }
+
+      .sub_titel {
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 70px;
+      }
+
+      .sub_titel span {
+        color: #00ccff;
+      }
+
+      .services_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+    .services_list div {
+  background-color: transparent;
+  padding: 50px 35px; /* slightly more padding */
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 20px #00ccff, 1px 1px 40px #00ccff;
+  min-height: 360px;
+  width: 100%; /* NEW: full width inside the grid */
+}
+
+      .services_list div i {
+        font-size: 50px;
+        margin-bottom: 30px;
+        color: #00ccff;
+        transition: 0.3s;
+      }
+
+      .services_list div h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        transition: 0.3s;
+        color: white;
+      }
+
+      .services_list div p {
+        line-height: 1.6;
+        transition: 0.3s;
+        color: white;
+        text-align: justify;
+      }
+
+      .services_list div:hover {
+        background: #00ccff;
+        color: white;
+        transform: translateY(-10px);
+      }
+
+      .services_list div:hover i,
+      .services_list div:hover h2,
+      .services_list div:hover p {
+        color: white;
+      }
+
+      .animation-fade {
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .services_list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .services_list {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+}
+
+    </style>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <section class="navegation">
+    <div class="header">
+      <div class="navbar-container">
+        <div class="navbar">
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <i class='bx bx-menu'></i>
+          </div>
+          <div class="nav-links">
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="Education.html">Education</a>
+            <a class="nav-link" href="skills.html">SKILLS</a>
+            <a class="nav-link" href="servises.html">Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section>
+      <div class="container animation-fade" id="services">
+        <h1 class="sub_titel">My <span>Services</span></h1>
+        <div class="services_list">
+          <div>
+            <i class="bx bx-code"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              I design modern, intuitive, and engaging user interfaces using
+              Figma and design tools. My focus is on enhancing user experience
+              through wireframes, prototypes, and clean visual designs that
+              align with your brand.
+            </p>
+          </div>
+
+          <div>
+            <i class="bx bx-crop"></i>
+            <h2>Front-End Development</h2>
+            <p>
+              I create responsive, visually appealing, and user-friendly
+              websites using HTML, CSS, JavaScript, and Bootstrap. Whether it’s
+              a landing page or a full interface, I focus on performance and
+              design that works perfectly across all devices.
+            </p>
+          </div>
+
+          <div>
+            <i class="bx bxl-apple"></i>
+            <h2>Full-Stack Development</h2>
+            <p>
+              From front-end interfaces to back-end logic, I provide complete
+              web solutions using technologies like React, Node.js, Express, and
+              MongoDB. I build scalable, secure, and dynamic web applications
+              tailored to your business goals.
+            </p>
+          </div>
+
+          <div>
+            <i class="bx bxl-wordpress"></i>
+            <h2>WordPress Designing</h2>
+            <p>
+              Need a personal blog, business site, or portfolio on WordPress? I
+              design custom, mobile-friendly, and SEO-optimized WordPress
+              websites using Elementor, themes, and plugins to fit your exact
+              needs.
+            </p>
+          </div>
+
+          <div>
+            <i class="bx bxl-react"></i>
+            <h2>MERN Stack Development</h2>
+            <p>
+              I build powerful web apps using the MERN stack: MongoDB, Express,
+              React, and Node.js. Whether it's a dashboard or a learning
+              platform, I ensure modern functionality and a seamless experience.
+            </p>
+          </div>
+
+          <div>
+            <i class="bx bx-data"></i>
+            <h2>Database Integration</h2>
+            <p>
+              I integrate and manage databases for your web applications using
+              MongoDB and MySQL. Your data will be secure, optimized, and ready
+              to power scalable web systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+      function toggleMenu() {
+      const links = document.querySelector('.nav-links');
+      links.classList.toggle('show');
+    }
+  </script>
+</html>
